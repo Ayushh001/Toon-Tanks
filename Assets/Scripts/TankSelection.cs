@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TankSelection : MonoBehaviour
+{
+    public TankSpwaner tankSpwaner;
+    public void GreenTankSelected()
+    {
+        Debug.Log("Green Tank Selected");
+        tankSpwaner.CreateTank(TankTypes.GreenTank);
+        this.gameObject.SetActive(false);
+    }
+
+    public void BlueTankSelected()
+    {
+        tankSpwaner.CreateTank(TankTypes.BlueTank);
+        this.gameObject.SetActive(false);
+    }
+    public void RedTankSelected()
+    {
+    tankSpwaner.CreateTank(TankTypes.RedTank);
+    this.gameObject.SetActive(false);
+    }
+
+}
